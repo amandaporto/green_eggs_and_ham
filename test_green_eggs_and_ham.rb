@@ -24,7 +24,6 @@ class GreenEggsAndHamTest < MiniTest::Test
   end
 
   def test_04_longest_word
-    skip
     assert_match /Sam-I-am/i, @book.longest_word
   end
 
