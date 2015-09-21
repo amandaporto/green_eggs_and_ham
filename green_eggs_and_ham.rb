@@ -5,6 +5,12 @@ class GreenEggsAndHam
   end
 
   def word_count
-    file = File.read("green_eggs_and_ham.txt").split(" ").count
+    @text.split(" ").count
+  end
+
+  def sorted_unique_words
+    @text.gsub!(/[?.!,]/, " ")
+    words = @text.split(" ")
+    words.map {|word| word.downcase}.uniq.sort
   end
 end
