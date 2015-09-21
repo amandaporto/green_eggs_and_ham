@@ -20,7 +20,6 @@ class GreenEggsAndHamTest < MiniTest::Test
   end
 
   def test_03_count_of_words_less_than_four_letters
-    skip
     assert_equal 59, @book.number_of_words_shorter_than(4)
   end
 
