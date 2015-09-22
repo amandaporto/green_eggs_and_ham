@@ -43,7 +43,7 @@ class GreenEggsAndHamTest < MiniTest::Test
     assert_equal 6, @book.stanzas.count
   end
 
-  def test_07_ine_count_should_not_include_blanks
+  def test_07_line_count_should_not_include_blanks
     assert_equal 19, @book.lines.count
   end
 

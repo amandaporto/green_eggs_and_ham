@@ -43,11 +43,10 @@ class GreenEggsAndHam
   end
 
   def punctuation_count
-    @text.split(" ").select {|characters| characters =~ /[?.!,]/}.count  #Why do we need ~ ??
+    @text.chars.count {|charac| "?,!.".include?(charac)}
   end
 
   def most_repeated_line
     lines.max_by {|line| lines.count(line)}
-    #end.values.max_by(&:size).first
   end
 end
