@@ -26,5 +26,14 @@ class GreenEggsAndHam
     words.max_by {|word| word.length}
   end
 
-  
+  def frequency_of_unique_words
+  frequency = Hash.new(0)
+  words.each {|word| frequency[word.downcase] += 1}
+  frequency
+  # inject
+  # each-with-object
+  end
+
+
+
 end
