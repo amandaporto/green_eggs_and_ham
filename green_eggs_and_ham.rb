@@ -1,4 +1,5 @@
 class GreenEggsAndHam
+  attr_accessor :count
 
   def initialize
     @text = File.read('green_eggs_and_ham.txt')
@@ -34,6 +35,8 @@ class GreenEggsAndHam
   # each-with-object
   end
 
-
+  def stanzas
+    @text.split(/\n\n/)
+  end
 
 end
