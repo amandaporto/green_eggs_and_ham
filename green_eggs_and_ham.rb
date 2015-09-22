@@ -11,8 +11,7 @@ class GreenEggsAndHam
   end
 
   def words
-    @text.gsub!(/[?.!,]/, " ")
-    @text.split(" ")
+    @text.gsub(/[?.!,]/, " ").split(" ")
   end
 
   def sorted_unique_words
@@ -40,7 +39,7 @@ class GreenEggsAndHam
   end
 
   def lines
-    @text.gsub!(/\n\n/, "\n").split(/\n/)
+    @text.gsub(/\n\n/, "\n").split(/\n/)
   end
 
   def punctuation_count
@@ -48,6 +47,7 @@ class GreenEggsAndHam
   end
 
   def most_repeated_line
-
+    lines.max_by {|line| lines.count(line)}
+    #end.values.max_by(&:size).first
   end
 end

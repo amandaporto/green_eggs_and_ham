@@ -52,7 +52,7 @@ class GreenEggsAndHamTest < MiniTest::Test
   end
 
   def test_09_line_most_often_used
-    assert_match /I do not like them, Sam-I-am./, @book.most_repeated_line
+    assert_equal "I do not like green eggs and ham.", @book.most_repeated_line
   end
 
   def self.test_order
