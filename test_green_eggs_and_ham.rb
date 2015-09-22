@@ -43,8 +43,16 @@ class GreenEggsAndHamTest < MiniTest::Test
     assert_equal 6, @book.stanzas.count
   end
 
-  def test_07_line_count_should_not_include_blanks
+  def test_07_ine_count_should_not_include_blanks
     assert_equal 19, @book.lines.count
+  end
+
+  def test_08_how_many_punctuation
+    assert_equal 17, @book.punctuation_count
+  end
+
+  def test_09_line_most_often_used
+    assert_match /I do not like them, Sam-I-am./, @book.most_repeated_line
   end
 
   def self.test_order

@@ -43,4 +43,11 @@ class GreenEggsAndHam
     @text.gsub!(/\n\n/, "\n").split(/\n/)
   end
 
+  def punctuation_count
+    @text.split(" ").select {|characters| characters =~ /[?.!,]/}.count  #Why do we need ~ ??
+  end
+
+  def most_repeated_line
+
+  end
 end
